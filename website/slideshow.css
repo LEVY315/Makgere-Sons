@@ -1,36 +1,96 @@
-/* styles.css */
-body {
+/* Reset and global styles */
+body,
+html {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
 }
 
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li.welcome-message {
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container h1 {
+    background-color: red;
+    padding: 0px 20px;
+    color: black;
+    display: inline-block;
+}
+
+.container h3 {
+    font-style: italic;
+}
+
+/* Slideshow styles */
 .slideshow-container {
     position: relative;
-    max-width: 1000px;
-    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .mySlides {
     display: none;
+    height: 100vh;
+    width: 100vw;
 }
 
-img {
-    vertical-align: middle;
+.mySlides img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
 }
 
-/* Fading animation */
+/* Fading animation for slides */
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.9;
     }
 
     to {
-        opacity: 1
+        opacity: 0.8;
     }
 }
 
@@ -76,4 +136,15 @@ img {
 .active,
 .dot:hover {
     background-color: #717171;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

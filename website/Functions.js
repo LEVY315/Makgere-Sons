@@ -1,4 +1,3 @@
-alert("We on!");
 
 function aboutUs(){
     window.location.href ="About us.html";
@@ -10,4 +9,7 @@ function Services(){
 
 function contactUs(){
     window.location.href = "Contact us.html";
+}
+function Home(){
+    window.location.href = "home.html";
 }
